@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Fillers>
+  <Filler>
+    <variable>$IllegalArgumentException</variable>
+    <text>Thrown to indicate that a method has been passed an illegal or inappropriate argument.</text>
+  </Filler>
+  <Filler>
+    <variable>$Exception</variable>
+    <text>Thrown to indicate a general {@link Exception} has happened</text>
+  </Filler>
+  <Filler>
+    <variable>$IndexOutOfBoundsException</variable>
+    <text>Thrown to indicate that an index of some sort (such as to an array, to a string, or to a vector) is out of range.</text>
+  </Filler>
+  <Filler>
+    <variable>$FileNotFoundException</variable>
+    <text>Signals that an attempt to open the file denoted by a specified pathname has failed.</text>
+  </Filler>
+  <Filler>
+    <variable>$UnsupportedEncodingException</variable>
+    <text>The Character Encoding is not supported.</text>
+  </Filler>
+</Fillers>

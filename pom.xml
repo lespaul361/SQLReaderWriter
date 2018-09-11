@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.lespaul361</groupId>
-    <artifactId>SQL</artifactId>
+    <artifactId>MySQLReaderWriter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
@@ -10,5 +10,45 @@
         <maven.compiler.source>9</maven.compiler.source>
         <maven.compiler.target>9</maven.compiler.target>
     </properties>
-    <name>SQL</name>
+    <name>MySQLReaderWriter</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.lespaul361</groupId>
+                <artifactId>JavadocPlugIn-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <configuration>
+                    <configurationFile>${project.basedir}\JavaFillInConfig.xml</configurationFile>               
+                    <fillers>
+                        <filler>
+                            <variable>$test</variable>
+                            <text>this is a test</text>
+                        </filler>
+                    </fillers>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>javadocfiller</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin><!-- mvn java-formatter:format -->
+                <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
+                <artifactId>maven-java-formatter-plugin</artifactId>
+                <version>0.4</version>
+                <configuration>
+                    <configFile>${project.basedir}\exclipseFormatter.xml</configFile>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
